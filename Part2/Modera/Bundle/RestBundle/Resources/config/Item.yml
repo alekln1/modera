@@ -1,0 +1,11 @@
+# In Propel, the most part of the code is located in base classes
+# src/Acme/DemoBundle/Resources/config/serializer/Model.om.BaseUser.yml
+Modera\RestBundle\Model\om\Item:
+    exclusion_policy: ALL
+    properties:
+        id:
+            expose: true
+        name:
+            expose: true
+        parent:
+            expose: true

@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="http://cdn.sencha.io/try/extjs/4.1.0/resources/css/ext-all-gray.css"/>
+<script type="text/javascript" charset="utf-8" src="http://cdn.sencha.io/ext-4.2.0-gpl/ext-all.js"></script>
+<script type="text/javascript">
+Ext.onReady(function() {
+	
+	var store = Ext.create('Ext.data.TreeStore', {
+		autoLoad: true,
+		autoSync:true,
+		proxy: {
+			type: 'ajax',
+			url: 'data.json',
+			reader: {
+				type: 'json',
+				root: 'children',
+				successProperty: 'success',
+				idProperty: 'id',
+			},
+		},
+		root: {
+			text: 'items',
+			expanded: true,
+			id: 'id'
+		}
+		
+		
+		
+	});
+
+	Ext.create('Ext.tree.Panel', {
+		title: 'Products tree',
+		width: 200,
+		height: 400,
+		store: store,
+		rootVisible: false,
+		renderTo: Ext.getBody()
+	});
+
+});
+</script>
