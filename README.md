@@ -8,9 +8,9 @@ PART3
 
 PART 2
 - includes in itself PART 1 and PART 3
-  - part 1 representation on default controller app_dev.php/
+  - part 1 representation on default controller app_dev.php
   - part 3 representation app_dev.php/tree
-  - part 2 representation included in part 3 under this part or can be available under app_dev.php/item
+  - part 2 are fully used and included in part 3(Treeview) or can be available under app_dev.php/item
     - service use additional parameter _format with values json (default) and xml
     - service is using data from part 1 parsed and prepared for the work
     - service has next actions
